@@ -1,0 +1,16 @@
+.estilo1{
+    border: 5px solid red;
+    background-color: bisque;
+}
+.estilo2{
+    color: red;
+    font-style: italic;
+}
+.estilo3{
+    border: 5px solid blue;
+    background-color: aqua;
+}
+.estilo4{
+    color: blue;
+    font-style: italic;
+}
