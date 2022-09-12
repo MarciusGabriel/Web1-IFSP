@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        background-color{
+            color: rgb(96, 96, 175);
+        }
+  table, td{
+            border:solid 1px red ;
+        }
+        td{
+            padding: 30px 60px ;
+            text-align: center;
+        }
+.cor1{
+    background-color: green;
+}
+      .cor2{
+        background-color: red;
+      } 
+      .cor3{
+        background-color: blue;
+      }
+      .cor4{
+        background-color: yellow;
+      }
+      .legenda td,,{
+        padding: 2px 3px;
+      }
+      .verde{
+        background-color: green;
+      }
+      .azul{
+        background-color: blue;
+      }
+      .amarelo{
+        background-color: yellow;
+      }
+      .vermelho{
+        background-color: red;
+      }
+
+    </style>
+</head>
+<body>
+    <a href="Menu.html">Voltar ao menu</a>
+    <hr>
+    <br>
+    <table>
+        <caption>Tabela colspan e rowspan</caption>
+          <tr class="cor1">
+            <td colspan="2">Colspan</td>
+            <td>Lorem</td>
+            <td rowspan="3" >Rowspan</td>
+        </tr>
+        <tr class="cor2">
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+        </tr>
+        <tr class="cor3">
+            <td>Lorem</td>
+            <td colspan="2" >Colspan</td>
+        </tr>
+        <tr class="cor4">
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+        </tr>
+    </table>
+    <table class="legenda">
+        <caption>Legenda</caption>
+        <tr>
+            <td>Linha 1</td>
+            <td class="verde">------</td>
+            <td>green</td>
+        </tr>
+        <tr>
+            <td>Linha 2</td>
+            <td class="vermelho">------</td>
+            <td>red</td>
+        </tr>
+        <tr>
+            <td>Linha 3</td>
+            <td class="azul">------</td>
+            <td>blue</td>
+        </tr>
+        <tr>
+            <td>Linha 4</td>
+            <td class="amarelo">------</td>
+            <td>yellow</td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
