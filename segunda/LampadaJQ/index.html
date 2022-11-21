@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Praticando 1 - Javascript parte III</h1>
+        <h2>Lâmpada</h2>
+    </header>
+    <main>
+        <img id="lampada" src="./lampada.png" />
+    </main>
+    <script>
+        $("#lampada").mouseover(() => {
+            $("body").css({ "color": "black", "backgroundColor": "white" });
+            $('#lampada').attr('src', "./lampada-acesa.png");
+        });
+        $("#lampada").mouseleave(() => {
+            $("body").css({ "color": "white", "backgroundColor": "black" });
+            $("#lampada").attr('src', "./lampada.png");
+        });
+    </script>
+</body>
+
+</html>

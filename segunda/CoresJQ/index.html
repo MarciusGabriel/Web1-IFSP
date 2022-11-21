@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        #btns-box {
+            width: 100%;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btns-box button {
+            width: 15rem;
+            height: 3rem;
+            border: 2px solid black;
+        }
+
+        #btn-red {
+            background-color: red;
+        }
+
+        #btn-green {
+            background-color: green;
+        }
+
+        #btn-blue {
+            background-color: blue;
+        }
+
+        #btn-yellow {
+            background-color: yellow;
+        }
+
+        #btn-pink {
+            background-color: pink;
+        }
+
+        #btn-reset {
+            width: 5rem;
+            height: 2rem;
+            margin-left: 20rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Praticando 3 - JavaScript - Cores(click e mouse)</h1>
+    </header>
+    <main>
+        <div id="btns-box">
+            <button id="btn-red"></button>
+            <button id="btn-green"></button>
+            <button id="btn-blue"></button>
+            <button id="btn-yellow"></button>
+            <button id="btn-pink"></button>
+        </div>
+        <button id="btn-reset">Reset</button>
+    </main>
+
+    <script>
+        let currentBodyColor = "white";
+        const buttonColors = ['red', 'green', 'blue', 'yellow', 'pink'];
+        for (const color of buttonColors) {
+            $(`#btn-${color}`).mouseover(() => {
+                $("body").css("backgroundColor", color);
+            });
+            $(`#btn-${color}`).mouseleave(() => {
+                $("body").css("backgroundColor", currentBodyColor);
+            });
+            $(`#btn-${color}`).click(() => {
+                currentBodyColor = color;
+                $("body").css("backgroundColor", color);
+            });
+        }
+        $('#btn-reset').click(() => {
+            currentBodyColor = 'white';
+            $("body").css("backgroundColor", 'white');
+        });
+    </script>
+</body>
+
+</html>

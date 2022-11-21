@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Praticando 1 - JavaScript</h1>
+    </header>
+    <main>
+        <h2 id="dinamic-title"></h2>
+        <div>
+            <button id="add-text">Adicionar texto (parágrafo de Lorem Ipsum)</button>
+            <button id="remove-text">Remover texto (todos os parágrafos)</button>
+        </div>
+        <div id="text-list">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique nisi eu tortor interdum, quis
+                dignissim ex tempus. Suspendisse potenti. Integer tristique lectus et mauris suscipit, nec dignissim
+                enim
+                euismod. Maecenas lobortis sem maximus odio varius, id tincidunt tortor convallis. Nulla facilisi.
+            </p>
+        </div>
+    </main>
+    <script>
+        $(document).ready(() => {
+            let result = prompt("Qual seu nome");
+            $("#dinamic-title").text(`Seja bem vindo ${result}`);
+        });
+        $("#add-text").click(() => {
+            $("#text-list").append("<p>" +
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique nisi eu tortor interdum, quis" +
+                "dignissim ex tempus. Suspendisse potenti. Integer tristique lectus et mauris suscipit, nec dignissim enim" +
+                "euismod. Maecenas lobortis sem maximus odio varius, id tincidunt tortor convallis. Nulla facilisi." +
+                "</p>");
+        });
+        $("#remove-text").click(() => {
+            $("#text-list").empty();
+        });
+    </script>
+</body>
+
+</html>
